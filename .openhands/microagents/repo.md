@@ -45,4 +45,4 @@ sandbox-init-template
 - ethers.js v6.7.1
 - web3modal
 
-This implementation provides the minimum viable structure for a DApp. Build upon this foundation to implement specific user requirements.
+This implementation provides the minimum viable structure for a DApp. Build upon this foundation to implement specific user requirements. Your task is done when you've tested that the implementation works.
