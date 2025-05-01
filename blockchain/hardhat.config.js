@@ -8,10 +8,10 @@ module.exports = {
     hardhat: {},
     // Add other networks as needed
     // Example:
-    // sepolia: {
-    //   url: process.env.SEPOLIA_URL || "",
-    //   accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    // },
+    sepolia: {
+      url: process.env.SEPOLIA_URL || "",
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
   },
   paths: {
     artifacts: "./artifacts",
