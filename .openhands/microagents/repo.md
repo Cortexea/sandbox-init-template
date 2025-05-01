@@ -6,28 +6,26 @@ You may assume hardhat, npm and react are installed. If you encounter not-found 
 
 ## Structure
 Your working directory is `/workspace`. It has a directory called dApp, under which there are multiple subdirectories and files. You can safely assume the following structure exists:
-
 ```
-workspace
-└── dApp   
-      ├── blockchain                   # Hardhat project
-      │   ├── contracts                # empty
-      │   ├── hardhat.config.js        # has solidity: "0.8.19" and other boilerplate
-      │   ├── package-lock.json
-      │   ├── package.json             # has required dependencies
-      │   ├── scripts
-      │   │   └── deploy.js            # empty
-      │   └── test                     # empty
-      ├── frontend                     # React app with ethers.js integration
-      │   ├── package-lock.json
-      │   ├── package.json             # has required dependencies like ethers and react
-      │   ├── public                   # empty
-      │   └── src                      # You will need to create App.js and other files here
-      │       ├── components           # empty
-      │       └── utils
-      │           └── ethereum.js      # Utilities for wallet connection
-      └── scripts
-         └── post-deploy.js           # empty
+sandbox-init-template
+   ├── blockchain                   # Hardhat project
+   │   ├── contracts                # empty
+   │   ├── hardhat.config.js        # has solidity: "0.8.19" and other boilerplate
+   │   ├── package-lock.json
+   │   ├── package.json             # has required dependencies
+   │   ├── scripts
+   │   │   └── deploy.js            # empty
+   │   └── test                     # empty
+   ├── frontend                     # React app with ethers.js integration
+   │   ├── package-lock.json
+   │   ├── package.json             # has required dependencies like ethers and react
+   │   ├── public                   # empty
+   │   └── src                      # You will need to create App.js and other files here
+   │       ├── components           # empty
+   │       └── utils
+   │           └── ethereum.js      # Utilities for wallet connection
+   └── scripts
+      └── post-deploy.js           # empty
 ```
 
 ## Development Workflow
