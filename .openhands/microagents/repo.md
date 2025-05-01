@@ -5,6 +5,8 @@ This is a skeletal directory structure of a decentralized application with Hardh
 You may assume hardhat, npm and react are installed. If you encounter not-found error, then attempt install.
 
 ## Structure
+Your working directory is `/workspace`. It has a directory called dApp, under which there are multiple subdirectories and files. You can safely assume the following structure exists:
+
 ```
 workspace
 └── dApp   
