@@ -2,19 +2,29 @@
 
 ## Overview
 This is a skeletal directory structure of a decentralized application with Hardhat (smart contracts) and React (frontend). Use this as a starting point to complete the user's requests.
+You may assume hardhat, npm and react are installed. If you encounter not-found error, then attempt install.
 
 ## Structure
 ```
-my-dapp/
-├── blockchain/         # Hardhat project
-│   ├── contracts/      
-│   ├── test/           # Test files
-│   ├── scripts/        # Deployment scripts
-│   └── hardhat.config.js
-├── frontend/           # React app with ethers.js integration
-│   ├── src/components/ 
-│   └── src/utils/      # ethereum.js: Utilities for wallet connection
-└── scripts/            # Project utilities like post-deploy.js
+dApp/
+├── blockchain                   # Hardhat project
+│   ├── contracts                # empty
+│   ├── hardhat.config.js        # has solidity: "0.8.19" and other boilerplate
+│   ├── package-lock.json
+│   ├── package.json             # has required dependencies
+│   ├── scripts
+│   │   └── deploy.js            # empty
+│   └── test                     # empty
+├── frontend                     # React app with ethers.js integration
+│   ├── package-lock.json
+│   ├── package.json             # has required dependencies like ethers and react
+│   ├── public                   # empty
+│   └── src                      # You will need to create App.js and other files here
+│       ├── components           # empty
+│       └── utils
+│           └── ethereum.js      # Utilities for wallet connection
+└── scripts
+    └── post-deploy.js           # empty
 ```
 
 ## Development Workflow
@@ -22,13 +32,10 @@ my-dapp/
    - Note: If you see compiler version errors, ensure the Solidity version in contracts matches the one in hardhat.config.js (0.8.19)
 2. Test contracts: `npx hardhat test`
 3. For local deployment: `npx hardhat node` (in one terminal) and `npx hardhat run scripts/deploy.js --network localhost` (in another)
-4. For Sepolia deployment: 
-   - First edit `.env` file and add your private key
-   - Then run: `npx hardhat run scripts/deploy.js --network sepolia`
-5. Copy contract address to frontend
+4. Copy contract address to frontend
    - After deployment, update contract address in `frontend/src/components/<contract>.js`
    - Write `node scripts/post-deploy.js` and run it to copy ABIs to frontend
-6. Run frontend: `cd frontend && npm start`
+5. Run frontend: `cd frontend && npm start`
 
 ## Technical Stack
 - Solidity 0.8.19
