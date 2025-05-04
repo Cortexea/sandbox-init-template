@@ -5,7 +5,7 @@ This is a skeletal directory structure of a decentralized application with Hardh
 You may assume hardhat, npm and react are installed. If you encounter not-found error, then attempt install.
 
 ## Structure
-Your working directory is `/workspace`. It has a directory called dApp, under which there are multiple subdirectories and files. You can safely assume the following structure exists:
+Your working directory is `/workspace`. It has a directory called sandbox-init-template, under which there are multiple subdirectories and files. You can safely assume the following structure exists:
 ```
 sandbox-init-template
    ├── blockchain                   # Hardhat project
@@ -29,14 +29,15 @@ sandbox-init-template
 ```
 
 ## Development Workflow
-1. Compile contracts: `cd blockchain && npx hardhat compile`
+1. Develop a plan for implementing the user's request. Be comprehensive. Keep it interactive, accept user's modifications. Go ahead to implementation mode when user confirms.
+2. Compile contracts: `cd blockchain && npx hardhat compile`
    - Note: If you see compiler version errors, ensure the Solidity version in contracts matches the one in hardhat.config.js (0.8.19)
-2. Test contracts: `npx hardhat test`
-3. For local deployment: `npx hardhat node` (in one terminal) and `npx hardhat run scripts/deploy.js --network localhost` (in another)
-4. Copy contract address to frontend
+3. Test contracts: `npx hardhat test`
+4. For local deployment: `npx hardhat node` (in one terminal) and `npx hardhat run scripts/deploy.js --network localhost` (in another)
+5. Copy contract address to frontend
    - After deployment, update contract address in `frontend/src/components/<contract>.js`
    - Write `node scripts/post-deploy.js` and run it to copy ABIs to frontend
-5. Run frontend: `cd frontend && npm start`
+6. Create frontend files. Design instructions: Make the UI looks modern and beautiful. Use tailwind CSS. Your task is done when the frontend server compiles successfully and all frontend tests pass.
 
 ## Technical Stack
 - Solidity 0.8.19
