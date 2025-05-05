@@ -28,17 +28,6 @@ sandbox-init-template
       └── post-deploy.js           # empty
 ```
 
-## Development Workflow
-1. Develop a plan for implementing the user's request. Be comprehensive. Keep it interactive, accept user's modifications. Go ahead to implementation mode when user confirms.
-2. Compile contracts: `cd blockchain && npx hardhat compile`
-   - Note: If you see compiler version errors, ensure the Solidity version in contracts matches the one in hardhat.config.js (0.8.19)
-3. Test contracts: `npx hardhat test`
-4. For local deployment: `npx hardhat node` (in one terminal) and `npx hardhat run scripts/deploy.js --network localhost` (in another)
-5. Copy contract address to frontend
-   - After deployment, update contract address in `frontend/src/components/<contract>.js`
-   - Write `node scripts/post-deploy.js` and run it to copy ABIs to frontend
-6. Create frontend files. Design instructions: Make the UI looks modern and beautiful. Use tailwind CSS. Your task is done when the frontend server compiles successfully and all frontend tests pass.
-
 ## Technical Stack
 - Solidity 0.8.19
 - Hardhat
