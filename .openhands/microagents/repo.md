@@ -17,7 +17,7 @@ Your working directory is `/workspace/sandbox-init-template`. The key structure 
 │   ├── package.json             # Dependencies for blockchain development
 │   ├── package-lock.json
 │   ├── scripts/                 # Deployment and interaction scripts
-│   │   └── deploy.js
+│   │   └── .gitkeep
 │   └── test/                    # Smart contract tests
 │       └── .gitkeep
 ├── frontend/                    # Modern web application (Vite + React + TS)
@@ -55,7 +55,7 @@ Your working directory is `/workspace/sandbox-init-template`. The key structure 
 │           ├── Index.tsx
 │           └── NotFound.tsx
 └── scripts/                     # General project scripts (e.g., post-deployment)
-    └── post-deploy.js
+    └── .gitkeep
 ```
 
 ## Technical Stack
