@@ -1,5 +1,6 @@
-
 #!/bin/bash
 echo "----- Begin setup.py -----"
-npm install 
+cd blockchain && npm install
+cd ../frontend && npm install 
+cd ..
 echo "-----   End setup.py -----"
