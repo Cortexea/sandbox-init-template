@@ -26,6 +26,7 @@ Your working directory is `/workspace/sandbox-init-template`. The key structure 
 │   ├── index.css               
 │   └── postcss.config.js        
 │   └── tailwind.config.js       
+│   └── vite.config.js       
 │   └── package.json            
 │   └── package-lock.json
 │   └── favicon.ico
@@ -135,6 +136,7 @@ apiKey: process.env.ETHERSCAN_API_KEY,
         "react-router-dom": "^7.6.0"
     },
     "devDependencies": {
+        "@vitejs/plugin-react": "^4.4.1",
         "autoprefixer": "^10.4.0",
         "postcss": "^8.4.0",
         "tailwindcss": "^3.3.0",
@@ -207,5 +209,18 @@ module.exports = {
     },
     plugins: [],
 }
+```
+
+/workspace/sandbox-init-template/frontend/vite.config.js
+```
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 8080
+  }
+});
 ```
 </current-frontend-code>
