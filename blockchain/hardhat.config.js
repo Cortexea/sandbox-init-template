@@ -6,12 +6,22 @@ module.exports = {
   solidity: "0.8.20",
   networks: {
     hardhat: {},
-    // Add other networks as needed
-    // Example:
-    sepolia: {
-      url: process.env.SEPOLIA_URL || "",
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
+    ...(process.env.SEPOLIA_URL
+      ? {
+          sepolia: {
+            url: process.env.SEPOLIA_URL || "",
+            accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+          },
+        }
+      : {}),
+    ...(process.env.HOLESKY_URL
+      ? {
+          holesky: {
+            url: process.env.HOLESKY_URL || "",
+            accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+          },
+        }
+      : {}),
   },
   paths: {
     artifacts: "./artifacts",
